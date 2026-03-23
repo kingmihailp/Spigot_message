@@ -10,13 +10,10 @@ public class WelcomePlugin extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        // Save default config to plugins/WelcomePlugin/config.yml
         saveDefaultConfig();
 
         getServer().getPluginManager().registerEvents(new WelcomeListener(this), this);
-
-        WelcomeAckCommand ackCommand = new WelcomeAckCommand();
-        getCommand("welcome_ack").setExecutor(ackCommand);
+        getServer().getPluginManager().registerEvents(new WelcomeGuiListener(), this);
 
         getLogger().info("WelcomePlugin enabled!");
     }

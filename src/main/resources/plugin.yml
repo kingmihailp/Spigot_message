@@ -2,19 +2,7 @@ name: WelcomePlugin
 version: ${project.version}
 main: com.example.welcomeplugin.WelcomePlugin
 api-version: '1.21'
-description: Shows a configurable welcome message to players on join
+description: Shows a configurable welcome GUI to players on join
 
 authors:
   - Author
-
-commands:
-  welcome_ack:
-    description: Acknowledge and close the welcome screen
-    usage: /welcome_ack
-    permission: welcomeplugin.ack
-    permission-message: ""
-
-permissions:
-  welcomeplugin.ack:
-    description: Allows closing the welcome book
-    default: true
