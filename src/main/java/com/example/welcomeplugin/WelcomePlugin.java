@@ -13,7 +13,6 @@ public class WelcomePlugin extends JavaPlugin {
         saveDefaultConfig();
 
         getServer().getPluginManager().registerEvents(new WelcomeListener(this), this);
-        getServer().getPluginManager().registerEvents(new WelcomeGuiListener(), this);
 
         getLogger().info("WelcomePlugin enabled!");
     }
